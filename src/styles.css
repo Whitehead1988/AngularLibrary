@@ -1,0 +1,10 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~open-iconic/font/css/open-iconic-bootstrap.css";
+
+/* You can add global styles to this file, and also import other style files */
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/* ngAlert customization */
+.app-level-alert {
+  padding-top: 10px;
+}

@@ -1,0 +1,26 @@
+<h6 class="pb-2 mb-0">Add book</h6>
+
+<form [formGroup]="bookForm" (ngSubmit)="addBook()" novalidate>
+  <div class="form-group">
+
+  </div>
+   <div class="form-group">
+    <label for="name">Title</label>
+    <input formControlName="title" type="text" class="form-control" id="title" placeholder="Docker">
+     <small *ngIf="bookForm.get('title')" class="form-text text-danger"></small>
+  </div>
+  <div class="form-group">
+    <label for="genre">Genre</label>
+    <select formControlName="genre" class="form-control" id="genre">
+      <option>UN_KNOWN</option>
+      <option>MODERN</option>
+      <option>CLASSICS</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="salary">Author</label>
+    <input formControlName="author" type="text" class="form-control" id="author" placeholder="Matthias">
+    <small *ngIf="bookForm.get('author').hasError('required')" class="form-text text-danger"></small>
+  </div>
+  <button type="submit" [disabled]="loader || bookForm.invalid" class="btn btn-primary">Submit</button>
+</form>
